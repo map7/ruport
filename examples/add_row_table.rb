@@ -1,5 +1,4 @@
-$: << File.join(File.dirname(__FILE__), '..', 'lib')
-require "ruport"
+require "#{File.dirname(__FILE__)}/../example_helper.rb"
 
 # Example of adding a row inbetween two rows of a already created table.
 

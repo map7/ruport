@@ -1,8 +1,7 @@
 # Demonstrates building a parent controller which provides additional 'built in'
 # formats, allowing anonymous formatter support to use the simple interface
 # rather than the :format => FormatterClass approach.
-
-require "ruport"
+require "#{File.dirname(__FILE__)}/../example_helper.rb"
 module FooCorp
   class Controller < Ruport::Controller
     def self.built_in_formats

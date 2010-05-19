@@ -1,5 +1,4 @@
-$: << File.join(File.dirname(__FILE__), '..', 'lib')
-require "ruport"
+require "#{File.dirname(__FILE__)}/../example_helper.rb"
 
 # Example using prawn 0.9.0 pdf generator
 class Document < Ruport::Controller

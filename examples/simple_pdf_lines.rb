@@ -1,4 +1,4 @@
-require "ruport"
+require "#{File.dirname(__FILE__)}/../example_helper.rb"
 
 # draws pretty little lines all over the place on a PDF
 

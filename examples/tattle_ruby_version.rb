@@ -1,7 +1,7 @@
 # A dump of the database for this example can be found in ./data/tattle.dump
-
+require "#{File.dirname(__FILE__)}/../example_helper.rb"
 require "active_record"
-require "ruport"
+
 
 # Update with your connection parameters
 ActiveRecord::Base.establish_connection(
@@ -21,11 +21,11 @@ table = Report.report_table(:all,
 
 grouping = Grouping(table, :by => "host_os")
 
-ruby_versions = Table(%w[platform ruby_version count])  
+ruby_versions = Table(%w[platform ruby_version count])
 
 grouping.each do |name,group|
   Grouping(group, :by => "ruby_version").each do |vname,group|
-    ruby_versions << { "platform"         => name, 
+    ruby_versions << { "platform"         => name,
                        "ruby_version"     => vname,
                        "count"            => group.length }
   end

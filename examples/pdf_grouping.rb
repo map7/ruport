@@ -1,6 +1,4 @@
-
-$: << File.join(File.dirname(__FILE__), '..', 'lib')
-require "ruport"
+require "#{File.dirname(__FILE__)}/../example_helper.rb"
 require "ruby-debug"
 
 class Document < Ruport::Controller
